@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 
 const DetalleProducto = () => {
-    const { id } = useParams();  // Recuperar el id de la URL
+    const { id } = useParams();
     const [producto, setProducto] = useState(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch("/instrumentos.json")  // Cargar el archivo JSON con los productos
+        fetch("/instrumentos.json")
             .then((res) => res.json())
             .then((data) => {
                 const productoEncontrado = data.find((item) => item.id === parseInt(id));
@@ -18,19 +18,31 @@ const DetalleProducto = () => {
                 console.error("Error al cargar los datos:", error);
                 setLoading(false);
             });
-    }, [id]);  // Volver a cargar cuando el id cambie
+    }, [id]);
 
     if (loading) return <p>Cargando...</p>;
     if (!producto) return <p>Producto no encontrado</p>;
 
     return (
-        <div className="p-6">
-            <img src={producto.imagen} alt={producto.nombre} className="w-full max-w-md mx-auto rounded-md" />
+        <div className="flex flex-col items-center text-center p-6 max-w-lg mx-auto bg-white shadow-lg rounded-lg">
+            <img
+                src={producto.imagen}
+                alt={producto.nombre}
+                className="w-60 h-60 object-contain rounded-md"
+            />
+
             <h1 className="text-2xl font-bold mt-4">{producto.nombre}</h1>
             <p className="text-gray-700 mt-2">{producto.descripcion}</p>
-            <p className="text-xl font-semibold mt-2">${producto.precio}</p>
-            <Link to="/" className="text-blue-500 mt-4 inline-block">Volver al catálogo</Link>
+            <p className="text-xl font-semibold mt-4 text-blue-600">${producto.precio}</p>
+
+            <Link
+                to="/"
+                className="mt-6 bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition"
+            >
+                Volver al catálogo
+            </Link>
         </div>
+
     );
 };
 

@@ -4,6 +4,7 @@ import ItemListContainer from "./components/ItemListContainer";
 import DetalleProducto from "./components/Detalle";
 import Categorias from "./components/Categorias";
 import Contacto from "./components/Contacto";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/categorias" element={<Categorias />} />
         <Route path="/contacto" element={<Contacto />} />
       </Routes>
+      <Footer/>
     </Router>
   );
 }

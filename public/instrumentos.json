@@ -33,5 +33,68 @@
         "imagen": "/img/vientos.jpg",
         "precio": 999.99,
         "descripcion": "Saxofón de latón dorado con excelente proyección de sonido, ideal para estudiantes y músicos avanzados."
+    },
+    {
+        "id": 6,
+        "nombre": "Guitarra Acústica Fender CD-60",
+        "imagen": "/img/ejemplo-guitarra.jpg",
+        "precio": 299.99,
+        "descripcion": "Guitarra acústica de madera de caoba con un sonido cálido y resonante, ideal para principiantes y músicos intermedios."
+    },
+    {
+        "id": 7,
+        "nombre": "Guitarra Acústica Fender CD-60",
+        "imagen": "/img/ejemplo-guitarra.jpg",
+        "precio": 299.99,
+        "descripcion": "Guitarra acústica de madera de caoba con un sonido cálido y resonante, ideal para principiantes y músicos intermedios."
+    },
+    {
+        "id": 8,
+        "nombre": "Guitarra Acústica Fender CD-60",
+        "imagen": "/img/ejemplo-guitarra.jpg",
+        "precio": 299.99,
+        "descripcion": "Guitarra acústica de madera de caoba con un sonido cálido y resonante, ideal para principiantes y músicos intermedios."
+    },
+    {
+        "id": 9,
+        "nombre": "Guitarra Acústica Fender CD-60",
+        "imagen": "/img/ejemplo-guitarra.jpg",
+        "precio": 299.99,
+        "descripcion": "Guitarra acústica de madera de caoba con un sonido cálido y resonante, ideal para principiantes y músicos intermedios."
+    },
+    {
+        "id": 10,
+        "nombre": "Guitarra Acústica Fender CD-60",
+        "imagen": "/img/ejemplo-guitarra.jpg",
+        "precio": 299.99,
+        "descripcion": "Guitarra acústica de madera de caoba con un sonido cálido y resonante, ideal para principiantes y músicos intermedios."
+    },
+    {
+        "id": 11,
+        "nombre": "Guitarra Acústica Fender CD-60",
+        "imagen": "/img/ejemplo-guitarra.jpg",
+        "precio": 299.99,
+        "descripcion": "Guitarra acústica de madera de caoba con un sonido cálido y resonante, ideal para principiantes y músicos intermedios."
+    },
+    {
+        "id": 12,
+        "nombre": "Guitarra Acústica Fender CD-60",
+        "imagen": "/img/ejemplo-guitarra.jpg",
+        "precio": 299.99,
+        "descripcion": "Guitarra acústica de madera de caoba con un sonido cálido y resonante, ideal para principiantes y músicos intermedios."
+    },
+    {
+        "id": 13,
+        "nombre": "Guitarra Acústica Fender CD-60",
+        "imagen": "/img/ejemplo-guitarra.jpg",
+        "precio": 299.99,
+        "descripcion": "Guitarra acústica de madera de caoba con un sonido cálido y resonante, ideal para principiantes y músicos intermedios."
+    },
+    {
+        "id": 14,
+        "nombre": "Guitarra Acústica Fender CD-60",
+        "imagen": "/img/ejemplo-guitarra.jpg",
+        "precio": 299.99,
+        "descripcion": "Guitarra acústica de madera de caoba con un sonido cálido y resonante, ideal para principiantes y músicos intermedios."
     }
 ]
