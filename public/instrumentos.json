@@ -8,10 +8,10 @@
     },
     {
         "id": 2,
-        "nombre": "Batería Electrónica Roland TD-1K",
+        "nombre": "Batería Yamaha",
         "imagen": "/img/percusion.jpg",
         "precio": 499.99,
-        "descripcion": "Batería electrónica compacta con pads sensibles a la velocidad, perfecta para practicar en casa sin hacer ruido."
+        "descripcion": "Batería acustica Yamaha excelente calidad"
     },
     {
         "id": 3,
@@ -23,14 +23,14 @@
     {
         "id": 4,
         "nombre": "Violín Stradivarius Replica",
-        "imagen": "imagenes/violin.jpg",
+        "imagen": "img/violin.jpg",
         "precio": 799.99,
         "descripcion": "Violín artesanal con madera de abeto y ébano, diseñado para ofrecer un sonido rico y profesional."
     },
     {
         "id": 5,
         "nombre": "Saxofón Alto Yamaha YAS-280",
-        "imagen": "imagenes/saxofon.jpg",
+        "imagen": "img/vientos.jpg",
         "precio": 999.99,
         "descripcion": "Saxofón de latón dorado con excelente proyección de sonido, ideal para estudiantes y músicos avanzados."
     }

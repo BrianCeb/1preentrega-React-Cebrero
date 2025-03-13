@@ -8,7 +8,7 @@ import Contacto from "./components/Contacto";
 export default function App() {
   return (
     <Router>
-      <Navbar />
+      <Navbar/>
       <Routes>
         <Route path="/" element={<ItemListContainer />} />
         <Route path="/detalle/:id" element={<DetalleProducto />} />
