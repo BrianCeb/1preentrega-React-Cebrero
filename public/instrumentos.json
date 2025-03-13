@@ -16,21 +16,21 @@
     {
         "id": 3,
         "nombre": "Teclado Yamaha PSR-E373",
-        "imagen": "img/teclas.jpg",
+        "imagen": "/img/teclas.jpg",
         "precio": 249.99,
         "descripcion": "Teclado portátil de 61 teclas con funciones de aprendizaje y una amplia variedad de sonidos de alta calidad."
     },
     {
         "id": 4,
         "nombre": "Violín Stradivarius Replica",
-        "imagen": "img/violin.jpg",
+        "imagen": "/img/violin.jpg",
         "precio": 799.99,
         "descripcion": "Violín artesanal con madera de abeto y ébano, diseñado para ofrecer un sonido rico y profesional."
     },
     {
         "id": 5,
         "nombre": "Saxofón Alto Yamaha YAS-280",
-        "imagen": "img/vientos.jpg",
+        "imagen": "/img/vientos.jpg",
         "precio": 999.99,
         "descripcion": "Saxofón de latón dorado con excelente proyección de sonido, ideal para estudiantes y músicos avanzados."
     }

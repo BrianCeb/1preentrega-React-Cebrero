@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
     return (
         <nav className="bg-blue-600 p-4 text-white flex justify-between">
-            <h1 className="text-xl font-bold">Tienda de Instrumentos</h1>
+            <h1 className="text-xl font-bold">MDZ-Store</h1>
             <div>
                 <Link to="/" className="mx-2">Home</Link>
                 <Link to="/categorias" className="mx-2">Categorías</Link>
