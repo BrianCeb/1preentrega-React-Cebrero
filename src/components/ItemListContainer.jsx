@@ -5,22 +5,29 @@ import Item from "./Item";
 const ItemListContainer = () => {
     const [resultado, setResultado] = useState([]);
     const [visibleCount, setVisibleCount] = useState(6);
-    const params = useParams();
+    const { categoriaId } = useParams();
 
     useEffect(() => {
-        fetch(params.id === undefined ? "/instrumentos.json" : `/producto/${params.id}.json`)
+        fetch("/instrumentos.json")
             .then((res) => res.json())
-            .then((res) => {
-                setResultado(res);
+            .then((data) => {
+                if (categoriaId) {
+                    const filtrados = data.filter(producto =>
+                        producto.categoria === categoriaId.toLowerCase()
+                    );
+                    setResultado(filtrados);
+                } else {
+                    setResultado(data);
+                }
             })
             .catch((error) => console.error("Error al cargar los datos:", error));
-    }, [params.id]);  
+    }, [categoriaId]);
 
     return (
         <div className="p-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {resultado.slice(0, visibleCount).map((item) => (
-                    <Item key={item.id} producto={item} />  
+                    <Item key={item.id} producto={item} />
                 ))}
             </div>
             {resultado.length > visibleCount && (

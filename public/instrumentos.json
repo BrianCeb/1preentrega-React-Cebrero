@@ -4,97 +4,119 @@
         "nombre": "Guitarra Acústica Fender CD-60",
         "imagen": "/img/ejemplo-guitarra.jpg",
         "precio": 299.99,
-        "descripcion": "Guitarra acústica de madera de caoba con un sonido cálido y resonante, ideal para principiantes y músicos intermedios."
+        "descripcion": "Guitarra acústica de madera de caoba con un sonido cálido y resonante, ideal para principiantes y músicos intermedios.",
+        "categoria" : "guitarras"
     },
     {
         "id": 2,
         "nombre": "Batería Yamaha",
         "imagen": "/img/percusion.jpg",
         "precio": 499.99,
-        "descripcion": "Batería acustica Yamaha excelente calidad"
+        "descripcion": "Batería acustica Yamaha excelente calidad",
+        "categoria":"baterias"
     },
     {
         "id": 3,
         "nombre": "Teclado Yamaha PSR-E373",
         "imagen": "/img/teclas.jpg",
         "precio": 249.99,
-        "descripcion": "Teclado portátil de 61 teclas con funciones de aprendizaje y una amplia variedad de sonidos de alta calidad."
+        "descripcion": "Teclado portátil de 61 teclas con funciones de aprendizaje y una amplia variedad de sonidos de alta calidad.",
+        "categoria":"teclados"
     },
     {
         "id": 4,
         "nombre": "Violín Stradivarius Replica",
         "imagen": "/img/violin.jpg",
         "precio": 799.99,
-        "descripcion": "Violín artesanal con madera de abeto y ébano, diseñado para ofrecer un sonido rico y profesional."
+        "descripcion": "Violín artesanal con madera de abeto y ébano, diseñado para ofrecer un sonido rico y profesional.",
+        "categoria": "violines"
     },
     {
         "id": 5,
         "nombre": "Saxofón Alto Yamaha YAS-280",
         "imagen": "/img/vientos.jpg",
         "precio": 999.99,
-        "descripcion": "Saxofón de latón dorado con excelente proyección de sonido, ideal para estudiantes y músicos avanzados."
+        "descripcion": "Saxofón de latón dorado con excelente proyección de sonido, ideal para estudiantes y músicos avanzados.",
+        "categoria": "saxofones"
     },
     {
         "id": 6,
         "nombre": "Guitarra Acústica Fender CD-60",
         "imagen": "/img/ejemplo-guitarra.jpg",
         "precio": 299.99,
-        "descripcion": "Guitarra acústica de madera de caoba con un sonido cálido y resonante, ideal para principiantes y músicos intermedios."
+        "descripcion": "Guitarra acústica de madera de caoba con un sonido cálido y resonante, ideal para principiantes y músicos intermedios.",
+        "categoria": "guitarras"
     },
     {
         "id": 7,
         "nombre": "Guitarra Acústica Fender CD-60",
         "imagen": "/img/ejemplo-guitarra.jpg",
         "precio": 299.99,
-        "descripcion": "Guitarra acústica de madera de caoba con un sonido cálido y resonante, ideal para principiantes y músicos intermedios."
+        "descripcion": "Guitarra acústica de madera de caoba con un sonido cálido y resonante, ideal para principiantes y músicos intermedios.",
+        "categoria": "guitarras"
     },
     {
         "id": 8,
         "nombre": "Guitarra Acústica Fender CD-60",
         "imagen": "/img/ejemplo-guitarra.jpg",
         "precio": 299.99,
-        "descripcion": "Guitarra acústica de madera de caoba con un sonido cálido y resonante, ideal para principiantes y músicos intermedios."
+        "descripcion": "Guitarra acústica de madera de caoba con un sonido cálido y resonante, ideal para principiantes y músicos intermedios.",
+        "categoria": "guitarras"
     },
     {
         "id": 9,
         "nombre": "Guitarra Acústica Fender CD-60",
         "imagen": "/img/ejemplo-guitarra.jpg",
         "precio": 299.99,
-        "descripcion": "Guitarra acústica de madera de caoba con un sonido cálido y resonante, ideal para principiantes y músicos intermedios."
+        "descripcion": "Guitarra acústica de madera de caoba con un sonido cálido y resonante, ideal para principiantes y músicos intermedios.",
+        "categoria": "guitarras"
     },
     {
         "id": 10,
         "nombre": "Guitarra Acústica Fender CD-60",
         "imagen": "/img/ejemplo-guitarra.jpg",
         "precio": 299.99,
-        "descripcion": "Guitarra acústica de madera de caoba con un sonido cálido y resonante, ideal para principiantes y músicos intermedios."
+        "descripcion": "Guitarra acústica de madera de caoba con un sonido cálido y resonante, ideal para principiantes y músicos intermedios.",
+        "categoria": "guitarras"
     },
     {
         "id": 11,
         "nombre": "Guitarra Acústica Fender CD-60",
         "imagen": "/img/ejemplo-guitarra.jpg",
         "precio": 299.99,
-        "descripcion": "Guitarra acústica de madera de caoba con un sonido cálido y resonante, ideal para principiantes y músicos intermedios."
+        "descripcion": "Guitarra acústica de madera de caoba con un sonido cálido y resonante, ideal para principiantes y músicos intermedios.",
+        "categoria": "guitarras"
     },
     {
         "id": 12,
         "nombre": "Guitarra Acústica Fender CD-60",
         "imagen": "/img/ejemplo-guitarra.jpg",
         "precio": 299.99,
-        "descripcion": "Guitarra acústica de madera de caoba con un sonido cálido y resonante, ideal para principiantes y músicos intermedios."
+        "descripcion": "Guitarra acústica de madera de caoba con un sonido cálido y resonante, ideal para principiantes y músicos intermedios.",
+        "categoria": "guitarras"
     },
     {
         "id": 13,
         "nombre": "Guitarra Acústica Fender CD-60",
         "imagen": "/img/ejemplo-guitarra.jpg",
         "precio": 299.99,
-        "descripcion": "Guitarra acústica de madera de caoba con un sonido cálido y resonante, ideal para principiantes y músicos intermedios."
+        "descripcion": "Guitarra acústica de madera de caoba con un sonido cálido y resonante, ideal para principiantes y músicos intermedios.",
+        "categoria": "guitarras"
     },
     {
         "id": 14,
         "nombre": "Guitarra Acústica Fender CD-60",
         "imagen": "/img/ejemplo-guitarra.jpg",
         "precio": 299.99,
-        "descripcion": "Guitarra acústica de madera de caoba con un sonido cálido y resonante, ideal para principiantes y músicos intermedios."
+        "descripcion": "Guitarra acústica de madera de caoba con un sonido cálido y resonante, ideal para principiantes y músicos intermedios.",
+        "categoria": "guitarras"
+    },
+    {
+        "id": 15,
+        "nombre": "Teclado Yamaha PSR-E373",
+        "imagen": "/img/teclas.jpg",
+        "precio": 249.99,
+        "descripcion": "Teclado portátil de 61 teclas con funciones de aprendizaje y una amplia variedad de sonidos de alta calidad.",
+        "categoria": "teclados"
     }
 ]
