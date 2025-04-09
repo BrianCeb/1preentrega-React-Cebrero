@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useCart } from "../context/CartContext";
+import CartWidget from "./CartWidget";
 
 const Navbar = () => {
     const [menuAbierto, setMenuAbierto] = useState(false);
+    const { cantidadTotal } = useCart();
 
     const categorias = [
         { nombre: "Guitarras", ruta: "/categorias/guitarras" },
@@ -14,15 +17,12 @@ const Navbar = () => {
 
     return (
         <nav className="bg-blue-600 p-4 text-white flex justify-between items-center">
-            {/* Logo */}
-            <h1 className="text-xl font-bold">MDZ-Store</h1>
-            
-            {/* Contenedor de enlaces alineados a la derecha */}
+            <Link to="/" className="hover:underline"><h1 className="text-xl font-bold">MDZ-Store</h1></Link>
+
             <div className="flex items-center space-x-4">
-                {/* Menú desplegable de Categorías */}
                 <div className="relative">
-                    <button 
-                        onClick={() => setMenuAbierto(!menuAbierto)} 
+                    <button
+                        onClick={() => setMenuAbierto(!menuAbierto)}
                         className="bg-blue-500 px-4 py-2 rounded-md hover:bg-blue-700 transition"
                     >
                         Categorías
@@ -31,9 +31,9 @@ const Navbar = () => {
                     {menuAbierto && (
                         <div className="absolute right-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg">
                             {categorias.map((categoria, index) => (
-                                <Link 
-                                    key={index} 
-                                    to={categoria.ruta} 
+                                <Link
+                                    key={index}
+                                    to={categoria.ruta}
                                     className="block px-4 py-2 hover:bg-gray-200"
                                     onClick={() => setMenuAbierto(false)}
                                 >
@@ -44,9 +44,11 @@ const Navbar = () => {
                     )}
                 </div>
 
-                {/* Otros enlaces */}
-                <Link to="/" className="hover:underline">Home</Link>
+                
                 <Link to="/contacto" className="hover:underline">Contacto</Link>
+                <Link to="/carrito">
+                    <CartWidget cantidad={cantidadTotal} />
+                </Link>
             </div>
         </nav>
     );

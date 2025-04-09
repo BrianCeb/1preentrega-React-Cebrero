@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import { useCart } from "../context/CartContext";
 
 const DetalleProducto = () => {
     const { id } = useParams();
     const [producto, setProducto] = useState(null);
     const [loading, setLoading] = useState(true);
+    const { agregarAlCarrito } = useCart();
 
     useEffect(() => {
         fetch("/instrumentos.json")
@@ -35,6 +37,12 @@ const DetalleProducto = () => {
             <p className="text-gray-700 mt-2">{producto.descripcion}</p>
             <p className="text-xl font-semibold mt-4 text-blue-600">${producto.precio}</p>
 
+            <button
+                className="mt-4 bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition"
+                onClick={() => agregarAlCarrito(producto)}
+            >
+                Agregar al carrito
+            </button>
             <Link
                 to="/"
                 className="mt-6 bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition"
