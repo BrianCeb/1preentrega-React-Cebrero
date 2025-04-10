@@ -1,36 +1,41 @@
-// src/components/Carrito.jsx
 import { useCart } from '../context/CartContext';
 import { useState, useEffect } from 'react';
 import { collection, addDoc, Timestamp } from "firebase/firestore";
 import { db } from "../firebaseConfig";
 
 const Cart = () => {
-    const {
-        cartItems,
-        agregarAlCarrito,
-        quitarUnidad,
-        quitarDelCarrito,
-        vaciarCarrito,
-    } = useCart();
-
+    const { cartItems, agregarAlCarrito, quitarUnidad, quitarDelCarrito, vaciarCarrito } = useCart();
     const [mostrarFormulario, setMostrarFormulario] = useState(false);
     const [formData, setFormData] = useState({ nombre: '', email: '', telefono: '' });
+    const [enviando, setEnviando] = useState(false);
     const [total, setTotal] = useState(0);
 
     useEffect(() => {
-        const nuevoTotal = cartItems.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
-        setTotal(nuevoTotal);
+        const calcularNuevoTotal = () => {
+            const nuevoTotal = cartItems.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
+            setTotal(nuevoTotal);
+        };
+
+        calcularNuevoTotal();
     }, [cartItems]);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
+    const calcularTotal = () => {
+        return total;
+    };
+
     const handleCompra = async () => {
+        if (enviando) return;
+
         if (!formData.nombre || !formData.email || !formData.telefono) {
             alert('Por favor completa todos los campos.');
             return;
         }
+
+        setEnviando(true);
 
         const orden = {
             cliente: formData,
@@ -40,7 +45,7 @@ const Cart = () => {
                 precio,
                 cantidad,
             })),
-            total,
+            total: calcularTotal(),
             fecha: Timestamp.fromDate(new Date()),
         };
 
@@ -52,6 +57,8 @@ const Cart = () => {
         } catch (error) {
             console.error('Error al guardar la orden:', error);
             alert('Ocurrió un error al procesar la compra.');
+        } finally {
+            setEnviando(false);
         }
     };
 
@@ -99,7 +106,7 @@ const Cart = () => {
                     ))}
 
                     <div className="text-right mt-4">
-                        <p className="text-xl font-bold">Total: ${total}</p>
+                        <p className="text-xl font-bold">Total: ${calcularTotal().toFixed(2)}</p>
                         <button
                             onClick={() => setMostrarFormulario(true)}
                             className="mt-4 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
@@ -137,9 +144,10 @@ const Cart = () => {
                             />
                             <button
                                 onClick={handleCompra}
-                                className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                                disabled={enviando}
+                                className={`bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 ${enviando ? 'opacity-50 cursor-not-allowed' : ''}`}
                             >
-                                Confirmar compra
+                                {enviando ? 'Procesando...' : 'Confirmar compra'}
                             </button>
                         </div>
                     )}
