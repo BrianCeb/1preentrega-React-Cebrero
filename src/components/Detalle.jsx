@@ -1,29 +1,39 @@
-import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
-import { useCart } from "../context/CartContext";
+import { useEffect, useState } from 'react';
+import { useParams, Link } from 'react-router-dom';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../firebaseConfig';
+import { useCart } from '../context/CartContext';
 
-const DetalleProducto = () => {
+const Detalle = () => {
     const { id } = useParams();
     const [producto, setProducto] = useState(null);
     const [loading, setLoading] = useState(true);
     const { agregarAlCarrito } = useCart();
 
     useEffect(() => {
-        fetch("/instrumentos.json")
-            .then((res) => res.json())
-            .then((data) => {
-                const productoEncontrado = data.find((item) => item.id === parseInt(id));
-                setProducto(productoEncontrado);
+        const fetchProducto = async () => {
+            try {
+                const querySnapshot = await getDocs(collection(db, 'instrumentos'));
+                const productos = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+                const productoEncontrado = productos.find(item => item.id === parseInt(id));
+
+                if (productoEncontrado) {
+                    setProducto(productoEncontrado);
+                } else {
+                    console.log('No se encontró el producto');
+                }
                 setLoading(false);
-            })
-            .catch((error) => {
-                console.error("Error al cargar los datos:", error);
+            } catch (error) {
+                console.error('Error al obtener el producto desde Firebase:', error);
                 setLoading(false);
-            });
+            }
+        };
+
+        fetchProducto();
     }, [id]);
 
-    if (loading) return <p>Cargando...</p>;
-    if (!producto) return <p>Producto no encontrado</p>;
+    if (loading) return <p className="text-center mt-10">Cargando detalle...</p>;
+    if (!producto) return <p className="text-center mt-10">Producto no encontrado</p>;
 
     return (
         <div className="flex flex-col items-center text-center p-6 max-w-lg mx-auto bg-white shadow-lg rounded-lg">
@@ -50,8 +60,7 @@ const DetalleProducto = () => {
                 Volver al catálogo
             </Link>
         </div>
-
     );
 };
 
-export default DetalleProducto;
+export default Detalle;

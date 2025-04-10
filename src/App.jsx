@@ -15,7 +15,7 @@ export default function App() {
         <Route path="/" element={<ItemListContainer />} />
         <Route path="/detalle/:id" element={<DetalleProducto />} />
         <Route path="/categorias" element={<Categorias />} />
-        <Route path="/categorias/:categoriaId" element={<ItemListContainer />} />
+        <Route path="/categorias/:categoria" element={<ItemListContainer />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="*" element={<h2 className="p-6 text-center">404 - Página no encontrada</h2>} />
         <Route path="/carrito" element={<Cart />} />
